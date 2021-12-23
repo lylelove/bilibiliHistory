@@ -28,6 +28,7 @@ def sort(ar):
     dict = {}
     dict = dict.fromkeys(ar, 0)
     ca = list(dict)
+    temp = [0,0]
     number = list(dict)
     for num in range(0,len(ca)):
         number[num]=0;
@@ -35,6 +36,15 @@ def sort(ar):
         for i in range(0, len(ar)):
             if ca[num] == ar[i]:
                 number[num] = number[num] + 1
+    for num in range(0,len(ca)):
+        for i in range(0,len(ca)):
+            if number[num]<number[i]:
+                temp[0]=number[i]
+                number[i]=number[num]
+                number[num]=temp[0]
+                temp[1]=ca[i]
+                ca[i]=ca[num]
+                ca[num]=temp[1]
     return ca,number
 
 
@@ -75,12 +85,6 @@ def counting():
             except:
                 flag = False
                 print(num)
-            # record = "/html/body/div[2]/div/div[3]/ul/li[" + str(num) + "]/div[2]/div[2]/div/span/span"
-            # target = driver.find_element(By.XPATH, record)
-            # a = target.get_attribute('innerHTML')
-            # results.append(a)
-            # num = num + 1
-            # print(num)
 
     return results
 
