@@ -1,3 +1,7 @@
+# 爬取哔哩哔哩历史——基于selenium、pyecharts库
+
+![bilibiliHistory](https://socialify.git.ci/lylelove/bilibiliHistory/image?description=1&language=1&name=1&owner=1&theme=Light)
+
 ### 使用
 
 1.下载bilibiliHistory.py
